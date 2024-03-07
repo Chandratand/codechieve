@@ -12,8 +12,8 @@ const MENUS = [
     label: 'Home',
   },
   {
-    href: '/#our-solution',
-    label: 'Our Solution',
+    href: '/#our-Services',
+    label: 'Our Services',
   },
   {
     href: '/our-works',
