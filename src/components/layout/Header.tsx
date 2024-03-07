@@ -32,8 +32,10 @@ export default function Header() {
   const onScroll = () => {
     if (window.scrollY > 0) {
       headerRef.current?.classList.add('shadow-lg');
+      headerRef.current?.classList.add('bg-background');
     } else {
       headerRef.current?.classList.remove('shadow-lg');
+      headerRef.current?.classList.remove('bg-background');
     }
   };
 
@@ -43,8 +45,8 @@ export default function Header() {
   }, []);
 
   return (
-    <div ref={headerRef} className="supports-backdrop-blur:bg-background/60 fixed inset-x-0 top-0 z-20 border-b bg-background/95 backdrop-blur">
-      <nav className="relative flex items-center justify-between px-4 py-2 sm:py-3">
+    <div ref={headerRef} className="fixed inset-x-0 top-0 z-20 backdrop-blur">
+      <nav className="container relative flex items-center justify-between px-4 py-2 sm:py-3">
         <div>
           <Link href={'/'} className="font-semibold">
             <Icons.logo />
